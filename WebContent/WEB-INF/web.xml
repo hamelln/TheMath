@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TheMath</display-name>
+  
+  <!-- 프로젝트 자체를 실행시킬 때 돌리는 파일이다. -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 서블릿을 등록해둔다. name은 대명사로 쓸 변수명이다. class에는 경로 입력. -->
+  <servlet>
+    <servlet-name>MainController</servlet-name>
+    <servlet-class>com.math.controller.main.MainController</servlet-class>
+  </servlet>
+  
+ <!-- 서블릿을 매핑시키는 곳이다. 홈페이지에서 ~~.do로 이동하라는 입력이 들어오면 
+ MainController로 등록한 서블릿으로 이동한다. 
+ 지금은 MainController를 com.math.controller.main.MainController로 등록해뒀다.
+ 따라서 ~~.do라는 홈페이지로 이동하라는 명령이 들어오면
+ com.math.controller.main.MainController로 이동해서 작업을 처리한다.-->
+  <servlet-mapping>
+    <servlet-name>MainController</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+</web-app>

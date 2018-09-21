@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shoppingMapper">
+
+	<select id="selectShopping" resultType="Shopping">
+		select * from shopping where shopping_id = #{id}
+	</select>
+	
+	<insert id="insetShopping">
+		insert into shopping
+			(lecture_thumnail, lecture_name, lecture_describe)
+		values
+			(#{lecture_thumnail}, #{lecture_name}, #{lecture_describe})
+	</insert>
+		
+	<delete id="deleteAllLectureInShoppingList">
+		delete from shopping where shopping_id = #{id}
+	</delete>
+	
+	<delete id="deleteALectureInShoppingList">
+		delete from shopping where shopping_id = #{id} and lecture_name = #{lecture_name}
+	</delete>
+	
+	<select id="countShoppingList" resultType="Integer">
+		select count(*) from shopping
+	</select>
+	
+</mapper>
