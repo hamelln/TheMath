@@ -42,12 +42,11 @@ public class MemberDaoImpl implements MemberDao {
 	//SqlSession을 선언한다. 현재 내가 작성한 SqlSession은 xml과 연결시켜준다.
 	SqlSession sqlSession = SqlSessionManager.getInstance().getSession();
 
-	//Dao의 메소드를 오버라이드한다.
+	//Dao의 메소드를 오버라이드한다. 이 메소드는 로그인 시 아이디와 비밀번호를 체크한다.
 	@Override
 	public int checkUser(String email, String pw) {
 		int result = -1;
 		MemberBean member = (MemberBean) sqlSession.selectOne("selectAMember", email);
-
 		if (member != null) {
 			if (email.equals(member.getEmail())) {
 				result = pw.equals(member.getPw()) ? 1 : 0;
@@ -58,7 +57,7 @@ public class MemberDaoImpl implements MemberDao {
 		return result;
 	}
 	
-	//Dao의 메소드를 오버라이드한다.
+	//Dao의 메소드를 오버라이드한다. 이 메소드는 로그인 시 비교확인할 회원정보를 데이터베이스에서 꺼내온다.
 	@Override
 	public MemberBean getMember(String email) {
 		MemberBean member = new MemberBean();
@@ -66,8 +65,11 @@ public class MemberDaoImpl implements MemberDao {
 		return sqlSession.selectOne("selectAMember", email);
 	}
 
+	//Dao의 메소드를 오버라이드한다. 이 메소드는 입력된 정보를 데이터베이스에 집어넣는다.
 	@Override
 	public void join(MemberBean memberBean) {
+		sqlSession.insert("memberMapper.joinMember", memberBean);
+		sqlSession.commit();
 	}
 
 	@Override
@@ -76,6 +78,8 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public void delete(String email) {
+		sqlSession.delete("deleteMember", email);
+		sqlSession.commit();
 	}
 
 }

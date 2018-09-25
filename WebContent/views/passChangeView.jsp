@@ -75,9 +75,12 @@ footer {
 <br>
 		<div class="coll">
 			<div class="infoBox">
-				<form id="frm" name="frm">
+				<form id="frm" name="frm" method="post" action="passChange.do">
 					<div class="form-group">
-						<label for="exampleInputEmail1"><strong>비밀번호를 재설정할 이메일</strong></label> <input type="email" class="form-control" id="email" placeholder="이메일">
+						<label for="exampleInputEmail1">
+						<strong>비밀번호를 재설정할 이메일</strong>
+						</label> 
+						<input type="email" class="form-control" id="email" name="email" placeholder="이메일">
 					</div>
 						<input type="submit" name="commit" class="btn btn-primary btn-block btn-signup" value="비밀번호 재설정 메일 보내기" data-disable-with="계정 만들기" onclick="pc()" style="background: #0078ff; margin-top: 5%; margin-bottom: 5%">
 				</form>

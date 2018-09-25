@@ -173,7 +173,7 @@ footer {
 
 		<div class="coll">
 			<div class="infoBox">
-				<form id="frm" name="frm" method="post" action="signUpPro.jsp">
+				<form id="frm" name="frm" method="post" action="memberSignUp.do">
 					<div class="form-group">
 						<label for="exampleInputName2"><strong>닉네임</strong> </label> <input
 							type="text" class="form-control" id="name" name="name"

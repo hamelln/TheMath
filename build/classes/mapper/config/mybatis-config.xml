@@ -5,9 +5,12 @@
 <configuration>
 
 	<typeAliases>
+	<!-- Member라는 변수에 다음 경로에 있는 파일을 집어넣는다. -->
 		<typeAlias alias="Member" type="com.math.model.member.MemberBean" />
 	</typeAliases>
 
+
+<!-- 데이터베이스 설정 -->
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
@@ -21,6 +24,7 @@
 	</environments>
 
 	<mappers>
+	<!-- 매퍼 리소스들을 등록하는 곳. 경로를 포함해서 파일명까지 입력하면 된다. -->
 		<mapper resource="mapper/member.xml" />
 	</mappers>
 </configuration>

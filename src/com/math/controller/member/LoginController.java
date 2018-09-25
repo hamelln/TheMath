@@ -13,7 +13,7 @@ import com.math.model.member.MemberDao;
 import com.math.model.member.MemberDaoImpl;
 import javax.servlet.http.HttpSession;
 
-public class MemberController implements Action {
+public class LoginController implements Action {
 
 	/* 주석 : 본 클래스는 회원 로그인을 다루는 컨트롤러이다.
 	 * 클래스의 목적은 다음과 같다.

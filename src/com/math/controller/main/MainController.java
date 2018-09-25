@@ -28,6 +28,8 @@ public class MainController extends HttpServlet {
 		//contextPath는 /프로젝트명
 		String contextPath=request.getContextPath();
 		
+		
+		
 		//프로젝트명은 필요없으니 잘라내서 부분문자열을 선언한다.
 		String command=RequestURI.substring(contextPath.length());
 		System.out.println("RequestURI="+RequestURI);
@@ -39,7 +41,7 @@ public class MainController extends HttpServlet {
 		
 		Properties prop = new Properties();
 		FileInputStream fis = 
-		  new FileInputStream("C:\\jspworkspace2\\TheMath\\WebContent\\command\\command.properties");
+		  new FileInputStream("C:\\Users\\L\\workspace\\TheMath\\WebContent\\command\\command.properties");
 		//프로퍼티를 이용해 fis라는 변수에 있는 경로에 있는 커맨드 파일을 읽는다.
 		prop.load(fis);
 		//읽었으니 이제 fis는 계속 열어둘 필요없다. 닫자.
