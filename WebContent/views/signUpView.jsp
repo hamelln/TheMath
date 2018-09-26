@@ -3,16 +3,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
-<style type="text/css">
+<style>
+
 footer {
 	position: relative;
 	text-align: center;
@@ -82,8 +81,6 @@ footer {
 }
 </style>
 
-<script src="//code.jquery.com/jquery.min.js"></script>
-
 <script type="text/javascript">
 	function checkDisable(frm) {
 		if (frm.chkbox.checked == true)
@@ -149,7 +146,7 @@ footer {
 	<div class="page-header" style="text-align: center;">
 		<h1>회원가입</h1>
 	</div>
-
+	
 	<div class="roco">
 		<div class="coll">
 			<div class="thumbnail" style="height: 100%;">

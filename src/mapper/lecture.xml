@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lectureMapper">
+
+	<select id="selectLecture" parameterType="String" resultType="LectureBean">
+		select * from lecture where name = #{name}
+	</select>
+	
+	<insert id="insertLecture" parameterType="LectureBean">
+		insert into lecture
+			(name, simple_desc, detail_desc, img, price, intro_video)
+		values
+			(#{name}, #{simple_desc}, #{detail_desc}, #{img}, #{price}, #{intro_video})
+	</insert>
+	
+</mapper>

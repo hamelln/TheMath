@@ -13,5 +13,8 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/L/Downloads/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/L/Downloads/javax.mail-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/L/Downloads/javax.mail-api-1.5.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

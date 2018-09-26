@@ -21,32 +21,9 @@ padding-left: 21%;
 
 
 </head>
-
-<header>
-	<nav class="navbar navbar-inverse" style="margin-bottom: 0">
-	  <div class="container-fluid">
-	  
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.do">메인이미지</a>
-	    </div>
-	
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	   		<ul class="nav navbar-nav navbar-left" style="padding-left: 30%;">
-		        <li><a href="index.do">메인</a></li>
-		        <li><a href="#">간단한 소개</a></li>
-		        <li><a href="#">수학 연습</a></li>
-		        <li><a href="#">코드 풀기</a></li>
-	   		</ul>
-	      	<ul class="nav navbar-nav navbar-right">
-		        <li><a href="signUpView.do">회원가입</a></li>
-		       	<li><a href="loginView.do">로그인</a></li>
-	      	</ul>
-	    </div>
-	  </div>
-	</nav>
-</header>
-
+<jsp:include page="views/header.jsp" flush="false"/>
 <body>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -123,23 +100,6 @@ padding-left: 21%;
   
 </div>
 </body>
-
-<footer>
-<div class="page-header"></div>
-<div class="padding-left">
-<p class="text-left">관리자 화면.</p>
-<p class="text-left">이용자 규약.</p>
-<p class="text-left">개인정보 수집 규약.</p>
-<address>
-  <strong>Famelln, Inc.</strong><br>
-  서울특별시 강남구 역삼동 테헤란로 147 10 3층<br>
-  <abbr title="Phone">문의 전화:</abbr> 010-2991-3392
-</address>
-<address>
-  <strong>문의 메일:</strong>
-  <a href="mailto:#">javaMelln@gmail.com</a>
-</address>
-</div>
-</footer>
+<jsp:include page="views/footer.jsp" flush="false"/>
 
 </html>

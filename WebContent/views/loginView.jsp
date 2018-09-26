@@ -124,31 +124,7 @@ footer {
 </script>
 
 </head>
-
-<header>
-	<nav class="navbar navbar-inverse" style="margin-bottom: 0">
-	  <div class="container-fluid">
-	  
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="index.jsp">메인이미지</a>
-	    </div>
-	
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	   		<ul class="nav navbar-nav navbar-left" style="padding-left: 30%;">
-		        <li><a href="main.jsp">메인</a></li>
-		        <li><a href="#">간단한 소개</a></li>
-		        <li><a href="#">수학 연습</a></li>
-		        <li><a href="#">코드 풀기</a></li>
-	   		</ul>
-	      	<ul class="nav navbar-nav navbar-right">
-		        <li><a href="signUpView.jsp">회원가입</a></li>
-		       	<li><a href="loginView.jsp">로그인</a></li>
-	      	</ul>
-	    </div>
-	  </div>
-	</nav>
-</header>
-
+<jsp:include page="header.jsp" flush="false"/>
 <body>
 
 	<div class="page-header" style="text-align: center;"><h1>통합 로그인</h1></div>
@@ -185,10 +161,5 @@ footer {
 	</div>
 
 </body>
-
-<footer> 
-<a href="test1.jsp">약관</a> &nbsp; 
-<a href="test2.jsp">개인정보 처리방침</a> &nbsp; 
-<a href="test3.jsp">문의</a>&nbsp; 
-</footer>
+<jsp:include page="footer.jsp" flush="false"/>
 </html>
